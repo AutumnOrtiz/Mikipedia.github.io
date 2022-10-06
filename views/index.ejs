@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mikipedia</title>
+  
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Saira+Condensed:wght@200&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abel&family=Playfair+Display&family=Titillium+Web:wght@300&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="/show">List</a>
+      <a href="/">Create</a>
+      <a href="/edit">Edit</a>
+      <div id="indicator"></div>
+    </div>
+       
+    <form class="form-inline" method ="POST" action ="/search" method="PUT">
+     
+      <input class="form-control mr-sm-2 search" type="search" placeholder="Search" aria-label="Search" type="text" id="search" name="search"><br><br>
+      <button class="btn  submitbtn" type="submit">Search</button>
+  </form>
+
+  </nav>
+
+
+
+
+  <div id="page" class="page">
+    <div id="image"></div>
+    <h1>Upload Character</h1>
+    <form class="form" id="form" action="/" method="POST">
+      <div class=" first">
+        <label class="label" for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname">
+      </div><br>
+
+      <div class="last">
+        <label class="label" for="lname">Last name:</label> <br>
+        <input type="text" id="lname" name="lname">
+      </div><br>
+
+      <div class="age">
+        <label class="label" for="age">Age:</label> <br>
+        <input type="text" id="age" name="age">
+      </div><br>
+
+      <div class="height">
+        <label class="label" for="height">Height:</label><br>
+        <input type="text" id="height" name="height">
+      </div><br>
+
+      <div class="occupation">
+        <label class="label" for="occ">Occupation:</label><br>
+        <input type="text" id="occ" name="occ">
+      </div><br>
+
+      <div class="status">
+        <label class="label" for="status">Status:</label><br>
+        <input type="text" id="status" name="status">
+      </div><br>
+
+      <div class="img">
+        <label class="label" for="img">Image:</label> <br>
+        <input type="file" id="img" name="img">
+      </div><br>
+
+      <div class="desc">
+        <label class="label" for="desc">Description:</label> <br>
+        <input type="text" id="desc" name="desc">
+
+        <input type="submit" value="submit" class="submit">
+      </div>
+    </form>
+  </div>
+  <div id="dots1"></div>
+  <div id="dots2"></div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+
+
+</html>

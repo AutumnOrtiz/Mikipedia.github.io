@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/editstyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Mikipedia</title>
+</head>
+<body>
+    
+  <nav>
+    <div class="nav-container">
+      <a href="/show">List</a>
+      <a href="/">Create</a>
+      <a href="/edit">Edit</a>
+      <div id="indicator"></div>
+    </div>
+       
+    <form class="form-inline" method ="POST" action ="/search" method="PUT">
+     
+      <input class="form-control mr-sm-2 search" type="search" placeholder="Search" aria-label="Search" type="text" id="search" name="search"><br><br>
+      <button class="btn  submitbtn" type="submit">Search</button>
+  </form>
+
+  </nav>
+<div class="whole">
+
+
+    <h1> Edit Your Data</h1>
+        
+
+    <form method ="POST" action ="/edit" method="PUT">
+        <label for="inputfirst">First name:</label>
+        <input type="text" id="inputfirst" name="inputfirst"><br><br>
+        <label for="inputlast">Last name:</label>
+        <input type="text" id="inputlast" name="inputlast"><br><br>
+
+        <button>delete</button>
+    </form>
+
+
+
+
+<!--Update form-->
+
+<form method="POST" action ="/update" method="PUT">
+
+            <fieldset>
+             
+                <!--Filter Chararcter-->
+                <div id="searchfirst">
+                <h3>Find Character</h3>
+                <label for="findfirst">First name:</label>
+                <input type="text" id="findfirst" name="findfirst"><br><br>
+                <label for="findlast">Last name:</label>
+                <input type="text" id="findlast" name="findlast"><br><br>
+                <button type="submit" formaction="/find">Search</button>
+                </div>
+              
+
+                <h3>Update Character</h3>
+           
+                <div class=" first">
+                <label for="fupdate">First name:</label><br>
+                <input type="text" id="fupdate" name="fupdate" value="<%= firstName %>">
+            </div>
+<br>
+            <div class="last">
+                <label for="lupdate">Last name:</label> <br>
+                <input type="text" id="lupdate" name="lupdate" value="<%= lastName %>">>
+            </div>
+
+            <br> 
+
+            <div class="age">
+                <label for="aupdate">Age:</label> <br>
+                <input type="text" id="aupdate" name="aupdate" value="<%= age %>">>
+            </div>
+
+            <br>
+
+            <div  class="height">
+                <label for="hupdate">Height:</label><br>
+                <input type="text" id="hupdate" name="hupdate" value="<%= height %>">>
+            </div>
+
+            <br>
+
+            <div  class="occupation">
+                <label for="oupdate">Occupation:</label><br>
+                <input type="text" id="oupdate" name="oupdate" value="<%= occupation %>">>
+            </div>
+
+            <br>
+
+            <div  class="status">
+                <label for="supdate">Status:</label><br>
+                <input type="text" id="supdate" name="supdate" value="<%= status %>">>
+            </div>
+
+           <br>
+
+           
+           <div class="img">
+            <label for="iupdate">Image:</label> <br>
+            <input type="file" id="iupdate" name="iupdate" value="<%= image %>">>
+        </div>
+
+        <br>
+        
+        <div class="desc">
+            <label for="dupdate">Description:</label> <br>
+            <input type="text" id="dupdate" name="dupdate" value="<%= description %>">>
+        </div>
+
+        <button>update</button>
+             </div>  
+    </form>
+  </div>
+</body>
+</html>
